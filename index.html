@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Pong — Effets visuels enrichis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="game-wrap">
+    <h1>Pong</h1>
+    <div id="scoreboard">
+      <div class="score-player"><span id="leftScore">0</span></div>
+      <div class="score-divider">—</div>
+      <div class="score-ai"><span id="rightScore">0</span></div>
+    </div>
+
+    <div class="toolbar">
+      <button id="soundToggle" aria-pressed="true">🔊 Son</button>
+      <label class="volume">
+        <input id="volume" type="range" min="0" max="1" step="0.05" value="0.9" />
+      </label>
+      <button id="resetBtn">Reset score</button>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="game" width="900" height="500" tabindex="0"></canvas>
+
+      <!-- Contrôles tactiles pour mobile -->
+      <div class="touch-controls" id="touchControls" aria-hidden="false">
+        <button class="touch-btn" id="touchUp">▲</button>
+        <button class="touch-btn" id="touchDown">▼</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div>Contrôles : déplacer la souris sur la zone du jeu, toucher l'écran ou utiliser ↑ / ↓</div>
+      <div>Appuyez sur Espace pour pause / reprise</div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
